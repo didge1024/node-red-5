@@ -138,11 +138,15 @@
         "inputs": 0,
         "handleallupdates": false,
         "handleprocessupdates": false,
-        "x": 250,
-        "y": 240,
+        "x": 730,
+        "y": 120,
         "wires": [
-            [],
-            []
+            [
+                "05e9c02681cb4969"
+            ],
+            [
+                "05e9c02681cb4969"
+            ]
         ]
     }
 ]
