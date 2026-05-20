@@ -158,23 +158,6 @@
         ]
     },
     {
-        "id": "31db82ea686cab36",
-        "type": "e-mail",
-        "z": "ce035e2f6f094766",
-        "server": "smtp.gmail.com",
-        "port": "465",
-        "authtype": "BASIC",
-        "saslformat": true,
-        "token": "oauth2Response.access_token",
-        "secure": true,
-        "tls": true,
-        "name": "floravaught@gmail.com",
-        "dname": "",
-        "x": 190,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "8c15c8dac6d4670e",
         "type": "trigger",
         "z": "ce035e2f6f094766",
@@ -195,7 +178,6 @@
         "y": 120,
         "wires": [
             [
-                "31db82ea686cab36",
                 "178916deca405207"
             ]
         ]
@@ -212,8 +194,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 200,
+        "x": 580,
+        "y": 460,
         "wires": []
     }
 ]
