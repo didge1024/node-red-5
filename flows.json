@@ -109,8 +109,8 @@
         "bot": "9d156d3c3c4f5a59",
         "haserroroutput": true,
         "outputs": 2,
-        "x": 580,
-        "y": 100,
+        "x": 560,
+        "y": 240,
         "wires": [
             [],
             []
@@ -125,5 +125,24 @@
         "x": 100,
         "y": 20,
         "wires": []
+    },
+    {
+        "id": "34af0c10a440f63c",
+        "type": "telegram receiver",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "bot": "",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "handleprocessupdates": false,
+        "x": 250,
+        "y": 240,
+        "wires": [
+            [],
+            []
+        ]
     }
 ]
