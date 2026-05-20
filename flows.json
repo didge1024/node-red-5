@@ -97,8 +97,7 @@
         "y": 360,
         "wires": [
             [
-                "05e9c02681cb4969",
-                "5ef9bad850c4d7eb"
+                "05e9c02681cb4969"
             ]
         ]
     },
@@ -110,15 +109,11 @@
         "bot": "9d156d3c3c4f5a59",
         "haserroroutput": true,
         "outputs": 2,
-        "x": 490,
-        "y": 300,
+        "x": 580,
+        "y": 100,
         "wires": [
-            [
-                "5ef9bad850c4d7eb"
-            ],
-            [
-                "5ef9bad850c4d7eb"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -129,24 +124,6 @@
         "info": "## Group 5 - LoRaWAN Device Info\n\n**Application ID:** `158daf48-5c45-4c73-88ee-75358c8f5323`\n**MQTT Topic:** `application/158daf48-5c45-4c73-88ee-75358c8f5323/device/+/event/up`\n**Telegram Chat ID:** `-5201535256`\n**All-groups Chat ID:** `-5144508977`\n\n### Relay 5 (4 Channel Relay)\n- **DEV EUI:** `48E663FFFE301020`\n- **APP EUI:** `48FF000000001020`\n- **APP KEY:** `4597658061A3698C78521ADCFE4B3C78`\n\n### TempHum5 (Temp & Humid Sensor)\n- **DEV EUI:** `48E663FFFE3010EA`\n- **APP EUI:** `48FF0000000010EA`\n- **APP KEY:** `6CDED7C5F00999F100B97BC68AD33220`\n\n---\n**Telegram for Windows:** [Download](https://telegram.org/dl/desktop/win)\n\n**AgroSense Sensor Manual:** [PDF](https://github.com/Makerfabs/Agrosense-Decoder/blob/main/Agrosense_Air_Temperature_Humidity_Sensor/AgroSense_Air%20Temperature%20and%20Humidity%20Sensor%20LoRaWAN%C2%AE%20Manual%20V1.2.pdf)\n",
         "x": 100,
         "y": 20,
-        "wires": []
-    },
-    {
-        "id": "5ef9bad850c4d7eb",
-        "type": "mqtt out",
-        "z": "ce035e2f6f094766",
-        "name": "Output",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "b79a80b523e80429",
-        "x": 330,
-        "y": 320,
         "wires": []
     }
 ]
