@@ -93,8 +93,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 150,
-        "y": 120,
+        "x": 270,
+        "y": 360,
         "wires": [
             [
                 "05e9c02681cb4969"
@@ -110,7 +110,7 @@
         "haserroroutput": true,
         "outputs": 2,
         "x": 560,
-        "y": 240,
+        "y": 100,
         "wires": [
             [],
             []
@@ -127,17 +127,74 @@
         "wires": []
     },
     {
-        "id": "2583f7bc757b9548",
-        "type": "catch",
+        "id": "d97ef42964a48022",
+        "type": "status",
         "z": "ce035e2f6f094766",
         "name": "",
         "scope": null,
-        "uncaught": false,
-        "x": 400,
-        "y": 80,
+        "x": 360,
+        "y": 60,
         "wires": [
             [
-                "05e9c02681cb4969"
+                "05e9c02681cb4969",
+                "8c15c8dac6d4670e"
+            ]
+        ]
+    },
+    {
+        "id": "178916deca405207",
+        "type": "telegram sender",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "bot": "9d156d3c3c4f5a59",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31db82ea686cab36",
+        "type": "e-mail",
+        "z": "ce035e2f6f094766",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "floravaught@gmail.com",
+        "dname": "",
+        "x": 190,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8c15c8dac6d4670e",
+        "type": "trigger",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "hello",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "178916deca405207",
+                "31db82ea686cab36"
             ]
         ]
     }
