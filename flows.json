@@ -93,11 +93,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 210,
-        "y": 300,
+        "x": 170,
+        "y": 240,
         "wires": [
             [
-                "05e9c02681cb4969"
+                "05e9c02681cb4969",
+                "5ef9bad850c4d7eb"
             ]
         ]
     },
@@ -127,13 +128,21 @@
         "wires": []
     },
     {
-        "id": "ff045db8d6be3b04",
-        "type": "comment",
+        "id": "5ef9bad850c4d7eb",
+        "type": "mqtt out",
         "z": "ce035e2f6f094766",
-        "name": "",
-        "info": "hi",
-        "x": 480,
-        "y": 520,
+        "name": "Output",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b79a80b523e80429",
+        "x": 270,
+        "y": 440,
         "wires": []
     }
 ]
