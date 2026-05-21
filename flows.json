@@ -142,5 +142,15 @@
         "x": 580,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "1cd7e535d97484b6",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "Telegram group linik",
+        "info": "https://t.me/+WY5m7Pdn48s4OWE5",
+        "x": 270,
+        "y": 120,
+        "wires": []
     }
 ]
