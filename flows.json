@@ -85,7 +85,7 @@
         "type": "mqtt in",
         "z": "ce035e2f6f094766",
         "name": "ECWC Infrastructure Meter",
-        "topic": "application/4240e563-c576-499b-b6e9-89b95e3c4236/device/+/event/up",
+        "topic": "application/158daf48-5c45-4c73-88ee-75358c8f5323",
         "qos": "0",
         "datatype": "auto-detect",
         "broker": "b79a80b523e80429",
@@ -110,8 +110,8 @@
         "bot": "9d156d3c3c4f5a59",
         "haserroroutput": true,
         "outputs": 2,
-        "x": 660,
-        "y": 240,
+        "x": 540,
+        "y": 380,
         "wires": [
             [],
             []
@@ -140,8 +140,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
-        "y": 620,
+        "x": 480,
+        "y": 560,
         "wires": []
     }
 ]
