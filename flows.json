@@ -143,5 +143,22 @@
         "x": 480,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "a717b87011af4274",
+        "type": "e-mail",
+        "z": "ce035e2f6f094766",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "IOT BOT Email",
+        "x": 540,
+        "y": 180,
+        "wires": []
     }
 ]
