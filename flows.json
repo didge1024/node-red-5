@@ -110,8 +110,8 @@
         "bot": "9d156d3c3c4f5a59",
         "haserroroutput": true,
         "outputs": 2,
-        "x": 540,
-        "y": 220,
+        "x": 660,
+        "y": 240,
         "wires": [
             [],
             []
@@ -139,8 +139,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 560,
+        "x": 880,
+        "y": 420,
         "wires": []
     }
 ]
