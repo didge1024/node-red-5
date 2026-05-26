@@ -161,10 +161,10 @@
         "token": "oauth2Response.access_token",
         "secure": true,
         "tls": true,
-        "name": "",
+        "name": "smithlum000@stu.sjisd.org",
         "dname": "IOT BOT Email",
-        "x": 540,
-        "y": 180,
+        "x": 600,
+        "y": 400,
         "wires": []
     },
     {
@@ -182,6 +182,35 @@
         "y": 80,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "bc66ae0b4d0e7882",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "test",
+        "payload": "hello world",
+        "payloadType": "str",
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "a717b87011af4274"
+            ]
         ]
     }
 ]
