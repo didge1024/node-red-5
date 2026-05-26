@@ -188,6 +188,7 @@
         "id": "bc66ae0b4d0e7882",
         "type": "inject",
         "z": "ce035e2f6f094766",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -205,8 +206,8 @@
         "topic": "test99",
         "payload": "hello world",
         "payloadType": "str",
-        "x": 280,
-        "y": 500,
+        "x": 320,
+        "y": 520,
         "wires": [
             [
                 "a717b87011af4274",
@@ -235,6 +236,7 @@
         "id": "d08923424dad4b7e",
         "type": "function",
         "z": "ce035e2f6f094766",
+        "d": true,
         "name": "function 1",
         "func": "\nreturn msg;",
         "outputs": 1,
