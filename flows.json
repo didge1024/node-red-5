@@ -258,7 +258,7 @@
         "name": "field 2",
         "info": "field 2: humidity",
         "x": 330,
-        "y": 600,
+        "y": 620,
         "wires": []
     },
     {
@@ -267,6 +267,16 @@
         "z": "ce035e2f6f094766",
         "name": "field 4",
         "info": "field 4: time (seconds) interval that the sensor sends out data",
+        "x": 330,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f1c7dd80580929ec",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 3",
+        "info": "field 3: temperature (celsius)",
         "x": 330,
         "y": 660,
         "wires": []
