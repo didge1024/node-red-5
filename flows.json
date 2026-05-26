@@ -260,5 +260,25 @@
         "x": 350,
         "y": 640,
         "wires": []
+    },
+    {
+        "id": "8beaa89f7c0c975e",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 3",
+        "info": "field 3: temperature (celsius)",
+        "x": 350,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c899249f960cac3f",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 4",
+        "info": "field 4: time (seconds)",
+        "x": 350,
+        "y": 720,
+        "wires": []
     }
 ]
