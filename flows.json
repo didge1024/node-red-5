@@ -257,8 +257,18 @@
         "z": "ce035e2f6f094766",
         "name": "field 2",
         "info": "field 2: humidity",
-        "x": 350,
-        "y": 640,
+        "x": 330,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "622ed287d884dfe6",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 4",
+        "info": "field 4: time",
+        "x": 330,
+        "y": 660,
         "wires": []
     }
 ]
