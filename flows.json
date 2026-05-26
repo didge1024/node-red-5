@@ -266,7 +266,7 @@
         "type": "comment",
         "z": "ce035e2f6f094766",
         "name": "field 4",
-        "info": "field 4: time",
+        "info": "field 4: time (seconds) interval that the sensor sends out data",
         "x": 330,
         "y": 660,
         "wires": []
