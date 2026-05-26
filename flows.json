@@ -116,8 +116,8 @@
         "bot": "9d156d3c3c4f5a59",
         "haserroroutput": true,
         "outputs": 2,
-        "x": 670,
-        "y": 280,
+        "x": 560,
+        "y": 260,
         "wires": [
             [],
             []
@@ -146,8 +146,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 540,
+        "x": 480,
+        "y": 560,
         "wires": []
     },
     {
@@ -163,7 +163,7 @@
         "tls": true,
         "name": "smithlum000@stu.sjisd.org",
         "dname": "IOT BOT Email",
-        "x": 840,
+        "x": 600,
         "y": 400,
         "wires": []
     },
@@ -227,8 +227,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 640,
+        "x": 300,
+        "y": 580,
         "wires": []
     },
     {
@@ -243,42 +243,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 400,
+        "x": 540,
+        "y": 340,
         "wires": [
-            [
-                "a717b87011af4274"
-            ]
+            []
         ]
-    },
-    {
-        "id": "2e3e4702cd07846e",
-        "type": "comment",
-        "z": "ce035e2f6f094766",
-        "name": "field 2",
-        "info": "field 2: humidity",
-        "x": 330,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "622ed287d884dfe6",
-        "type": "comment",
-        "z": "ce035e2f6f094766",
-        "name": "field 4",
-        "info": "field 4: time (seconds) interval that the sensor sends out data",
-        "x": 330,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "f1c7dd80580929ec",
-        "type": "comment",
-        "z": "ce035e2f6f094766",
-        "name": "field 3",
-        "info": "field 3: temperature (celsius)",
-        "x": 330,
-        "y": 660,
-        "wires": []
     }
 ]
