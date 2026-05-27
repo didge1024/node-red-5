@@ -236,7 +236,7 @@
         "type": "function",
         "z": "ce035e2f6f094766",
         "name": "function 1",
-        "func": "let battery = msg.payload.field1;\nlet humidity = msg.payload.field2;\nlet temperature = msg.payload.field3;\nlet time = msg.payload.field4;\n\nmsg.payload = \"battery: ${battery} - humidity: ${humidity} - temperature: ${temperature} - time: ${time}\"\n\nreturn msg;",
+        "func": "let battery = msg.payload.field1;\nlet humidity = msg.payload.field2;\nlet temperature = msg.payload.field3;\nlet time = msg.payload.field4;\n\nmsg.payload = `battery:  \nhumidity: ${humidity} - temperature: ${temperature} - time: ${time}`\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
