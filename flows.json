@@ -236,10 +236,10 @@
         "type": "function",
         "z": "ce035e2f6f094766",
         "name": "function 1",
-        "func": "\nreturn msg;",
+        "func": "msg.newpayload = msg.payload.object\n\nlet battery = msg.payload.field1;\nlet humidity = msg.payload.field2;\n\nmsg.payload = \n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
-        "noerr": 0,
+        "noerr": 1,
         "initialize": "",
         "finalize": "",
         "libs": [],
@@ -247,7 +247,8 @@
         "y": 400,
         "wires": [
             [
-                "a717b87011af4274"
+                "a717b87011af4274",
+                "53717a355bfeb950"
             ]
         ]
     },
@@ -312,6 +313,22 @@
         "info": "field 1: voltage",
         "x": 350,
         "y": 600,
+        "wires": []
+    },
+    {
+        "id": "53717a355bfeb950",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 480,
         "wires": []
     }
 ]
