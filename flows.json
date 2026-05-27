@@ -235,6 +235,7 @@
         "id": "d08923424dad4b7e",
         "type": "function",
         "z": "ce035e2f6f094766",
+        "d": true,
         "name": "function 1",
         "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nmsg.payload = {\n    battery: battery,\n    humidity: humidity,\n    temperature: temperature,\n    time: time\n};\n\nreturn msg;",
         "outputs": 1,
@@ -327,7 +328,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
+        "x": 840,
         "y": 480,
         "wires": []
     }
