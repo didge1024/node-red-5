@@ -104,7 +104,6 @@
             [
                 "05e9c02681cb4969",
                 "7ed9cbb3230aa9fe",
-                "63361651947f4952",
                 "d08923424dad4b7e"
             ]
         ]
@@ -147,7 +146,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
+        "x": 740,
         "y": 540,
         "wires": []
     },
@@ -164,7 +163,7 @@
         "tls": true,
         "name": "smithlum000@stu.sjisd.org",
         "dname": "IOT BOT Email",
-        "x": 1080,
+        "x": 840,
         "y": 400,
         "wires": []
     },
@@ -237,14 +236,14 @@
         "type": "function",
         "z": "ce035e2f6f094766",
         "name": "function 1",
-        "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nmsg.payload = {\n    battery: battery,\n    humidity: humidity,\n    temperature: temperature,\n    time: time\n};\n\nreturn msg;",
+        "func": "let battery = msg.payload.field1;\nlet humidity = msg.payload.field2;\nlet temperature = msg.payload.field3;\nlet time = msg.payload.field4;\n\nmsg.payload = `battery:  \nhumidity: ${humidity} \n- temperature: ${temperature} \n- time: ${time}`\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
+        "x": 580,
         "y": 400,
         "wires": [
             [
@@ -287,7 +286,6 @@
         "id": "63361651947f4952",
         "type": "delay",
         "z": "ce035e2f6f094766",
-        "d": true,
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -301,12 +299,10 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 560,
-        "y": 400,
+        "x": 180,
+        "y": 580,
         "wires": [
-            [
-                "d08923424dad4b7e"
-            ]
+            []
         ]
     },
     {
@@ -331,7 +327,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 980,
+        "x": 770,
         "y": 480,
         "wires": []
     }
