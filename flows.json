@@ -188,7 +188,6 @@
         "id": "bc66ae0b4d0e7882",
         "type": "inject",
         "z": "ce035e2f6f094766",
-        "d": true,
         "name": "",
         "props": [
             {
@@ -236,7 +235,6 @@
         "id": "d08923424dad4b7e",
         "type": "function",
         "z": "ce035e2f6f094766",
-        "d": true,
         "name": "function 1",
         "func": "\nreturn msg;",
         "outputs": 1,
@@ -281,6 +279,39 @@
         "info": "field 4: time (seconds)",
         "x": 350,
         "y": 720,
+        "wires": []
+    },
+    {
+        "id": "63361651947f4952",
+        "type": "delay",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "hours",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 180,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a136e5e806930228",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 1",
+        "info": "field 1: voltage",
+        "x": 350,
+        "y": 600,
         "wires": []
     }
 ]
