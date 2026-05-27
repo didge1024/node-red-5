@@ -116,7 +116,7 @@
         "bot": "9d156d3c3c4f5a59",
         "haserroroutput": true,
         "outputs": 2,
-        "x": 670,
+        "x": 710,
         "y": 280,
         "wires": [
             [],
@@ -227,7 +227,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
+        "x": 680,
         "y": 640,
         "wires": []
     },
