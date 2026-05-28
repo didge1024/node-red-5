@@ -142,12 +142,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 540,
+        "x": 640,
+        "y": 520,
         "wires": []
     },
     {
@@ -178,8 +178,8 @@
         "fPort": "",
         "confirmed": true,
         "debug": false,
-        "x": 530,
-        "y": 80,
+        "x": 410,
+        "y": 240,
         "wires": [
             []
         ]
@@ -327,8 +327,33 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
+        "x": 880,
         "y": 480,
         "wires": []
+    },
+    {
+        "id": "e726d571028a8588",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "relay payload",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"ad45588a-62f3-43c8-9d10-a4389278825c\",\"time\":\"2026-05-28T15:25:11.377803467+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"e27dcb4c-2645-43f9-a398-2c8bcd40631a\",\"deviceProfileName\":\"MakerFab Agrosense_4_Channel_Relay\",\"deviceName\":\"Relay 5\",\"devEui\":\"48e663fffe301020\",\"deviceClassEnabled\":\"CLASS_C\",\"tags\":{}},\"devAddr\":\"013c9f30\",\"adr\":true,\"dr\":3,\"fCnt\":16,\"fPort\":2,\"confirmed\":true,\"data\":\"ABEAAAAAAcoA4wAAAAAAAAAAAADqYGoYXlcA\",\"object\":{\"field4\":0,\"field8\":45.8,\"field6\":0,\"device_time\":\"2026-05-28 15:25:11\",\"field3\":0,\"field1\":0,\"field7\":22.7,\"field5\":0,\"device_time_unix\":1779981911,\"field2\":0,\"interval\":60},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":1417513920,\"nsTime\":\"2026-05-28T15:25:11.169856930+00:00\",\"rssi\":-49,\"snr\":11.5,\"channel\":2,\"location\":{\"source\":\"GPS\"},\"context\":\"fu8fvQ==\"}],\"txInfo\":{\"frequency\":904300000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 360,
+        "y": 480,
+        "wires": [
+            [
+                "d08923424dad4b7e"
+            ]
+        ]
     }
 ]
