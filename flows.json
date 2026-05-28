@@ -116,7 +116,7 @@
         "bot": "9d156d3c3c4f5a59",
         "haserroroutput": true,
         "outputs": 2,
-        "x": 710,
+        "x": 630,
         "y": 280,
         "wires": [
             [],
@@ -146,7 +146,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 820,
         "y": 600,
         "wires": []
     },
@@ -205,7 +205,7 @@
         "topic": "test99",
         "payload": "hello world",
         "payloadType": "str",
-        "x": 340,
+        "x": 300,
         "y": 540,
         "wires": [
             [
@@ -227,7 +227,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 820,
         "y": 640,
         "wires": []
     },
@@ -327,7 +327,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 820,
         "y": 560,
         "wires": []
     },
@@ -349,7 +349,7 @@
         "topic": "",
         "payload": "{\"deduplicationId\":\"ad45588a-62f3-43c8-9d10-a4389278825c\",\"time\":\"2026-05-28T15:25:11.377803467+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"e27dcb4c-2645-43f9-a398-2c8bcd40631a\",\"deviceProfileName\":\"MakerFab Agrosense_4_Channel_Relay\",\"deviceName\":\"Relay 5\",\"devEui\":\"48e663fffe301020\",\"deviceClassEnabled\":\"CLASS_C\",\"tags\":{}},\"devAddr\":\"013c9f30\",\"adr\":true,\"dr\":3,\"fCnt\":16,\"fPort\":2,\"confirmed\":true,\"data\":\"ABEAAAAAAcoA4wAAAAAAAAAAAADqYGoYXlcA\",\"object\":{\"field4\":0,\"field8\":45.8,\"field6\":0,\"device_time\":\"2026-05-28 15:25:11\",\"field3\":0,\"field1\":0,\"field7\":22.7,\"field5\":0,\"device_time_unix\":1779981911,\"field2\":0,\"interval\":60},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":1417513920,\"nsTime\":\"2026-05-28T15:25:11.169856930+00:00\",\"rssi\":-49,\"snr\":11.5,\"channel\":2,\"location\":{\"source\":\"GPS\"},\"context\":\"fu8fvQ==\"}],\"txInfo\":{\"frequency\":904300000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
         "payloadType": "json",
-        "x": 330,
+        "x": 290,
         "y": 460,
         "wires": [
             [
@@ -374,7 +374,7 @@
         "topic": "",
         "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":52.1,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
         "payloadType": "json",
-        "x": 340,
+        "x": 300,
         "y": 500,
         "wires": [
             [
