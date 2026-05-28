@@ -146,8 +146,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 540,
+        "x": 860,
+        "y": 600,
         "wires": []
     },
     {
@@ -227,8 +227,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 720,
+        "x": 860,
+        "y": 640,
         "wires": []
     },
     {
@@ -258,8 +258,8 @@
         "z": "ce035e2f6f094766",
         "name": "field 2",
         "info": "field 2: humidity",
-        "x": 350,
-        "y": 740,
+        "x": 490,
+        "y": 700,
         "wires": []
     },
     {
@@ -268,8 +268,8 @@
         "z": "ce035e2f6f094766",
         "name": "field 3",
         "info": "field 3: temperature (celsius)",
-        "x": 350,
-        "y": 780,
+        "x": 490,
+        "y": 740,
         "wires": []
     },
     {
@@ -278,8 +278,8 @@
         "z": "ce035e2f6f094766",
         "name": "field 4",
         "info": "field 4: time (seconds)",
-        "x": 350,
-        "y": 820,
+        "x": 490,
+        "y": 780,
         "wires": []
     },
     {
@@ -299,8 +299,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 180,
-        "y": 680,
+        "x": 300,
+        "y": 660,
         "wires": [
             []
         ]
@@ -311,8 +311,8 @@
         "z": "ce035e2f6f094766",
         "name": "field 1",
         "info": "field 1: voltage",
-        "x": 350,
-        "y": 700,
+        "x": 490,
+        "y": 660,
         "wires": []
     },
     {
@@ -327,8 +327,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 480,
+        "x": 860,
+        "y": 560,
         "wires": []
     },
     {
