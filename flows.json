@@ -154,6 +154,7 @@
         "id": "a717b87011af4274",
         "type": "e-mail",
         "z": "ce035e2f6f094766",
+        "d": true,
         "server": "smtp.gmail.com",
         "port": "465",
         "authtype": "BASIC",
@@ -335,7 +336,6 @@
         "id": "e726d571028a8588",
         "type": "inject",
         "z": "ce035e2f6f094766",
-        "d": true,
         "name": "relay payload",
         "props": [
             {
