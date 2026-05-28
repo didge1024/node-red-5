@@ -178,8 +178,8 @@
         "fPort": "",
         "confirmed": true,
         "debug": false,
-        "x": 410,
-        "y": 240,
+        "x": 470,
+        "y": 20,
         "wires": [
             []
         ]
@@ -258,8 +258,8 @@
         "z": "ce035e2f6f094766",
         "name": "field 2",
         "info": "field 2: humidity",
-        "x": 490,
-        "y": 700,
+        "x": 170,
+        "y": 120,
         "wires": []
     },
     {
@@ -268,8 +268,8 @@
         "z": "ce035e2f6f094766",
         "name": "field 3",
         "info": "field 3: temperature (celsius)",
-        "x": 490,
-        "y": 740,
+        "x": 170,
+        "y": 160,
         "wires": []
     },
     {
@@ -278,8 +278,8 @@
         "z": "ce035e2f6f094766",
         "name": "field 4",
         "info": "field 4: time (seconds)",
-        "x": 490,
-        "y": 780,
+        "x": 170,
+        "y": 200,
         "wires": []
     },
     {
@@ -299,8 +299,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 300,
-        "y": 660,
+        "x": 460,
+        "y": 60,
         "wires": [
             []
         ]
@@ -311,8 +311,8 @@
         "z": "ce035e2f6f094766",
         "name": "field 1",
         "info": "field 1: voltage",
-        "x": 490,
-        "y": 660,
+        "x": 170,
+        "y": 80,
         "wires": []
     },
     {
@@ -380,6 +380,98 @@
             [
                 "d08923424dad4b7e"
             ]
+        ]
+    },
+    {
+        "id": "fab73e4c5812eada",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "low temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":52.1,\"field1\":2.8,\"field3\":10,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 341.79998779296875,
+        "y": 716.4000244140625,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e18b44f64068b016",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "high temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":52.1,\"field1\":2.8,\"field3\":30,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 480,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe980970ebefa4f0",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "low humid",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":30,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 601.7999877929688,
+        "y": 696.4000244140625,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc25c466997e83d9",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "high humid",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":60,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 681.7999877929688,
+        "y": 736.4000244140625,
+        "wires": [
+            []
         ]
     }
 ]
