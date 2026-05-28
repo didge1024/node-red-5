@@ -146,8 +146,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 600,
+        "x": 860,
+        "y": 500,
         "wires": []
     },
     {
@@ -163,8 +163,8 @@
         "tls": true,
         "name": "smithlum000@stu.sjisd.org",
         "dname": "IOT BOT Email",
-        "x": 840,
-        "y": 420,
+        "x": 880,
+        "y": 400,
         "wires": []
     },
     {
@@ -227,8 +227,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 640,
+        "x": 860,
+        "y": 540,
         "wires": []
     },
     {
@@ -327,8 +327,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 560,
+        "x": 860,
+        "y": 460,
         "wires": []
     },
     {
