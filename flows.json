@@ -206,7 +206,7 @@
         "payload": "hello world",
         "payloadType": "str",
         "x": 340,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
                 "a717b87011af4274",
