@@ -300,7 +300,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 300,
-        "y": 80,
+        "y": 60,
         "wires": [
             []
         ]
