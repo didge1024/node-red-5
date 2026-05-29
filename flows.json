@@ -155,7 +155,6 @@
         "id": "a717b87011af4274",
         "type": "e-mail",
         "z": "ce035e2f6f094766",
-        "d": true,
         "server": "smtp.gmail.com",
         "port": "465",
         "authtype": "BASIC",
@@ -521,7 +520,7 @@
         "id": "83745f594254ae97",
         "type": "inject",
         "z": "ce035e2f6f094766",
-        "name": "",
+        "name": "TEST",
         "props": [
             {
                 "p": "payload"
@@ -538,7 +537,7 @@
         "topic": "cool",
         "payload": "trerty",
         "payloadType": "str",
-        "x": 750,
+        "x": 610,
         "y": 340,
         "wires": [
             [
