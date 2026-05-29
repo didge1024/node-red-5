@@ -451,8 +451,8 @@
         "topic": "",
         "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":15,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
         "payloadType": "json",
-        "x": 620,
-        "y": 680,
+        "x": 320,
+        "y": 840,
         "wires": [
             []
         ]
@@ -474,8 +474,8 @@
         "topic": "",
         "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":80,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
         "payloadType": "json",
-        "x": 620,
-        "y": 720,
+        "x": 320,
+        "y": 800,
         "wires": [
             []
         ]
@@ -484,7 +484,7 @@
         "id": "49e7b12ee81a8322",
         "type": "function",
         "z": "ce035e2f6f094766",
-        "name": "conditional",
+        "name": "conditional temp",
         "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nif (temperature > 30) {\n    msg.topic = \"THE WORLD IS ON FIRE\";\n    msg.payload = \"the temperature of the sensor is really high pls fix it: \" + temperature;\n} else if (temperature < 10) {\n    msg.topic = \"the ice age happened again\";\n    msg.payload = \"the temperature of the sensor is really low: \" + temperature;\n} else {\n    msg.topic = \"everything is fine\";\n    msg.payload = \"no issue with temperature: \" + temperature;\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -492,7 +492,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
+        "x": 620,
         "y": 580,
         "wires": [
             [
@@ -513,8 +513,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 830,
-        "y": 640,
+        "x": 860,
+        "y": 580,
         "wires": []
     },
     {
