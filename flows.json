@@ -104,7 +104,8 @@
             [
                 "05e9c02681cb4969",
                 "7ed9cbb3230aa9fe",
-                "d08923424dad4b7e"
+                "d08923424dad4b7e",
+                "49e7b12ee81a8322"
             ]
         ]
     },
@@ -473,6 +474,26 @@
         "y": 680,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "49e7b12ee81a8322",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 580,
+        "wires": [
+            [
+                "a717b87011af4274"
+            ]
         ]
     }
 ]
