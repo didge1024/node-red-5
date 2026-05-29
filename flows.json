@@ -148,7 +148,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 920,
         "y": 500,
         "wires": []
     },
@@ -165,7 +165,7 @@
         "tls": true,
         "name": "smithlum000@stu.sjisd.org",
         "dname": "IOT BOT Email",
-        "x": 880,
+        "x": 940,
         "y": 400,
         "wires": []
     },
@@ -229,7 +229,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 920,
         "y": 540,
         "wires": []
     },
@@ -238,7 +238,7 @@
         "type": "function",
         "z": "ce035e2f6f094766",
         "d": true,
-        "name": "function 1",
+        "name": "transmit sensor data",
         "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nmsg.payload = {\n    battery: battery,\n    humidity: humidity,\n    temperature: temperature,\n    time: time\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -246,7 +246,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 640,
         "y": 400,
         "wires": [
             [
@@ -330,7 +330,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 920,
         "y": 460,
         "wires": []
     },
@@ -497,7 +497,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
+        "x": 630,
         "y": 580,
         "wires": [
             [
@@ -518,7 +518,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 920,
         "y": 580,
         "wires": []
     },
@@ -543,8 +543,8 @@
         "topic": "cool",
         "payload": "trerty",
         "payloadType": "str",
-        "x": 610,
-        "y": 340,
+        "x": 630,
+        "y": 360,
         "wires": [
             [
                 "a717b87011af4274"
@@ -563,7 +563,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
+        "x": 630,
         "y": 620,
         "wires": [
             [
