@@ -105,7 +105,8 @@
                 "05e9c02681cb4969",
                 "7ed9cbb3230aa9fe",
                 "d08923424dad4b7e",
-                "49e7b12ee81a8322"
+                "49e7b12ee81a8322",
+                "5166804c9c202a6b"
             ]
         ]
     },
@@ -484,7 +485,7 @@
         "id": "49e7b12ee81a8322",
         "type": "function",
         "z": "ce035e2f6f094766",
-        "name": "conditional temp",
+        "name": "cond. temp",
         "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nif (temperature > 30) {\n    msg.topic = \"THE WORLD IS ON FIRE\";\n    msg.payload = \"the temperature of the sensor is really high pls fix it: \" + temperature;\n} else if (temperature < 10) {\n    msg.topic = \"the ice age happened again\";\n    msg.payload = \"the temperature of the sensor is really low: \" + temperature;\n} else {\n    msg.topic = \"everything is fine\";\n    msg.payload = \"no issue with temperature: \" + temperature;\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -492,7 +493,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 610,
         "y": 580,
         "wires": [
             [
@@ -540,6 +541,26 @@
         "payloadType": "str",
         "x": 610,
         "y": 340,
+        "wires": [
+            [
+                "a717b87011af4274"
+            ]
+        ]
+    },
+    {
+        "id": "5166804c9c202a6b",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "cond. humid",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 620,
         "wires": [
             [
                 "a717b87011af4274"
