@@ -556,7 +556,7 @@
         "type": "function",
         "z": "ce035e2f6f094766",
         "name": "cond. humid",
-        "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nif (humidity > 30) {\n    msg.topic = \"THE WORLD IS ON FIRE\";\n    msg.payload = \"the temperature of the sensor is really high pls fix it: \" + temperature;\n} else if (temperature < 10) {\n    msg.topic = \"the ice age happened again\";\n    msg.payload = \"the temperature of the sensor is really low: \" + temperature;\n} else {\n    msg.topic = \"everything is fine\";\n    msg.payload = \"no issue with temperature: \" + temperature;\n};\n\nreturn msg;",
+        "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nif (humidity > 60) {\n    msg.topic = \"high humidity warning\";\n    msg.payload = \"the humidity of the sensor is really high pls fix it: \" + humidity;\n} else if (humidity < 40) {\n    msg.topic = \"low humidity warning\";\n    msg.payload = \"the humidity of the sensor is really low: \" + humidity;\n} else {\n    msg.topic = \"everything is fine\";\n    msg.payload = \"no issue with humidity: \" + humidity;\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
