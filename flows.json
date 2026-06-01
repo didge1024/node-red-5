@@ -102,7 +102,6 @@
         "y": 400,
         "wires": [
             [
-                "05e9c02681cb4969",
                 "7ed9cbb3230aa9fe",
                 "d08923424dad4b7e",
                 "49e7b12ee81a8322",
@@ -119,8 +118,8 @@
         "bot": "9d156d3c3c4f5a59",
         "haserroroutput": true,
         "outputs": 2,
-        "x": 630,
-        "y": 280,
+        "x": 930,
+        "y": 180,
         "wires": [
             [],
             []
@@ -176,13 +175,13 @@
         "z": "ce035e2f6f094766",
         "name": "Relay Port",
         "server": "766e0213db921d4c",
-        "devEui": "48e663fffe30085a",
+        "devEui": "48e663fffe301020",
         "applicationId": "",
         "fPort": "",
         "confirmed": true,
         "debug": false,
-        "x": 350,
-        "y": 20,
+        "x": 590,
+        "y": 160,
         "wires": [
             []
         ]
@@ -654,5 +653,35 @@
         "x": 920,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "83086b5d1aa60c8c",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "6",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "01",
+        "payloadType": "str",
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
     }
 ]
