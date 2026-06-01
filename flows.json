@@ -166,7 +166,7 @@
         "tls": true,
         "name": "smithlum000@stu.sjisd.org",
         "dname": "IOT BOT Email",
-        "x": 940,
+        "x": 960,
         "y": 400,
         "wires": []
     },
