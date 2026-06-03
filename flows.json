@@ -305,8 +305,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 340,
-        "y": 60,
+        "x": 200,
+        "y": 180,
         "wires": [
             []
         ]
@@ -662,14 +662,14 @@
         "id": "83086b5d1aa60c8c",
         "type": "inject",
         "z": "ce035e2f6f094766",
-        "name": "R1 On",
+        "name": "R4 On",
         "props": [
             {
                 "p": "payload"
             },
             {
                 "p": "fPort",
-                "v": "6",
+                "v": "9",
                 "vt": "str"
             }
         ],
@@ -746,6 +746,176 @@
         "id": "dbdbaaf561f78233",
         "type": "inject",
         "z": "ce035e2f6f094766",
+        "name": "R4 Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "9",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "00",
+        "payloadType": "str",
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
+    },
+    {
+        "id": "599a4ce209d67f68",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R3 On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "8",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "01",
+        "payloadType": "str",
+        "x": 370,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd4260d53348db85",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R3 Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "8",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "00",
+        "payloadType": "str",
+        "x": 380,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8dbac6fd040b3297",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R2 On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "7",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "01",
+        "payloadType": "str",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b13e409a2315575",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R2 Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "7",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "00",
+        "payloadType": "str",
+        "x": 520,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5f76d6e70b8b1c9",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R1 On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "6",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "01",
+        "payloadType": "str",
+        "x": 650,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fbc58bc305b1cfde",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
         "name": "R1 Off",
         "props": [
             {
@@ -764,12 +934,10 @@
         "topic": "",
         "payload": "00",
         "payloadType": "str",
-        "x": 390,
-        "y": 220,
+        "x": 660,
+        "y": 80,
         "wires": [
-            [
-                "36cf813c2bcc5dfa"
-            ]
+            []
         ]
     }
 ]
