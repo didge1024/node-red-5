@@ -639,7 +639,7 @@
         "type": "debug",
         "z": "ce035e2f6f094766",
         "name": "debug 5",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
