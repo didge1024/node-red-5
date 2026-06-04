@@ -199,6 +199,36 @@
         ]
     },
     {
+        "id": "bc66ae0b4d0e7882",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "test99",
+        "payload": "hello world",
+        "payloadType": "str",
+        "x": 300,
+        "y": 540,
+        "wires": [
+            [
+                "a717b87011af4274",
+                "a7fdb08685acf5c5"
+            ]
+        ]
+    },
+    {
         "id": "a7fdb08685acf5c5",
         "type": "debug",
         "z": "ce035e2f6f094766",
@@ -315,226 +345,6 @@
         "x": 920,
         "y": 460,
         "wires": []
-    },
-    {
-        "id": "49e7b12ee81a8322",
-        "type": "function",
-        "z": "ce035e2f6f094766",
-        "name": "cond. temp",
-        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet battery = 0;\nlet humidity = 0;\nlet temperature = 0;\nlet time = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    battery = data.field1;\n    humidity = data.field2;\n    temperature = data.field3;\n    time = data.field4;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    battery = 0;\n    humidity = data.field8;\n    temperature = data.field7;\n    time = data.interval;\n}\n\n\nif (temperature > 30) {\n    msg.topic = \"THE WORLD IS ON FIRE\";\n    msg.payload = \"the temperature of the sensor is really high pls fix it: \" + temperature + \" degrees celsius\";\n} else if (temperature < 10) {\n    msg.topic = \"the ice age happened again\";\n    msg.payload = \"the temperature of the sensor is really low: \" + temperature + \" degrees celsius\";\n} else {\n    return;\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
-        "y": 580,
-        "wires": [
-            [
-                "a717b87011af4274",
-                "a885f43048945fe8"
-            ]
-        ]
-    },
-    {
-        "id": "a885f43048945fe8",
-        "type": "debug",
-        "z": "ce035e2f6f094766",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "83745f594254ae97",
-        "type": "inject",
-        "z": "ce035e2f6f094766",
-        "name": "TEST",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "cool",
-        "payload": "trerty",
-        "payloadType": "str",
-        "x": 630,
-        "y": 360,
-        "wires": [
-            [
-                "a717b87011af4274"
-            ]
-        ]
-    },
-    {
-        "id": "5166804c9c202a6b",
-        "type": "function",
-        "z": "ce035e2f6f094766",
-        "name": "cond. humid",
-        "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nif (humidity > 60) {\n    msg.topic = \"high humidity warning\";\n    msg.payload = \"the humidity of the sensor is really high pls fix it: \" + humidity + \"% humidity\";\n} else if (humidity > 75) {\n    msg.topic = \"HIGH HUMIDITY WARNING\";\n    msg.payload = \"HUMIDITY IS REALLY HIGH THE WORLD IS ENDING: \" + humidity + \"% humidity\";\n} else if (humidity < 40) {\n    msg.topic = \"low humidity warning\";\n    msg.payload = \"the humidity of the sensor is really low: \" + humidity + \"% humidity\";\n} else {\n    return;\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
-        "y": 620,
-        "wires": [
-            [
-                "a717b87011af4274",
-                "f1268a53617782c8"
-            ]
-        ]
-    },
-    {
-        "id": "a4d30976a4a2380b",
-        "type": "debug",
-        "z": "ce035e2f6f094766",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "f1268a53617782c8",
-        "type": "debug",
-        "z": "ce035e2f6f094766",
-        "name": "debug 6",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "66e4c33c7ee94061",
-        "type": "debug",
-        "z": "ce035e2f6f094766",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "075bf09f8ffd3f52",
-        "type": "function",
-        "z": "ce035e2f6f094766",
-        "name": "cond. humid - Relay",
-        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet battery = 0;\nlet humidity = 0;\nlet temperature = 0;\nlet time = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    battery = data.field1;\n    humidity = data.field2;\n    temperature = data.field3;\n    time = data.field4;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    battery = 0;\n    humidity = data.field8;\n    temperature = data.field7;\n    time = data.interval;\n}\n\nif (humidity > 60) {\n    // turn on small fan (port 7)\n    msg.fPort = \"7\";\n    msg.payload = \"01\";\n} else if (humidity > 75) {\n    //fPort 6 Is Fan - TURN ON BIG FAN\n    msg.fPort = \"6\";\n    msg.payload = \"01\";\n} else if (humidity < 40) {\n    // TURN OFF ALL FANS\n    msg.fPort = \"6\";\n    msg.payload = \"00\";\n} else {\n    return;\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 660,
-        "y": 660,
-        "wires": [
-            [
-                "36cf813c2bcc5dfa",
-                "030f8b970c1bb019"
-            ]
-        ]
-    },
-    {
-        "id": "c556a2ae6cd54573",
-        "type": "debug",
-        "z": "ce035e2f6f094766",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "030f8b970c1bb019",
-        "type": "debug",
-        "z": "ce035e2f6f094766",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "bc66ae0b4d0e7882",
-        "type": "inject",
-        "z": "ce035e2f6f094766",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "test99",
-        "payload": "hello world",
-        "payloadType": "str",
-        "x": 300,
-        "y": 540,
-        "wires": [
-            [
-                "a717b87011af4274",
-                "a7fdb08685acf5c5"
-            ]
-        ]
     },
     {
         "id": "e726d571028a8588",
@@ -689,6 +499,93 @@
         ]
     },
     {
+        "id": "49e7b12ee81a8322",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "cond. temp",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet battery = 0;\nlet humidity = 0;\nlet temperature = 0;\nlet time = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    battery = data.field1;\n    humidity = data.field2;\n    temperature = data.field3;\n    time = data.field4;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    battery = 0;\n    humidity = data.field8;\n    temperature = data.field7;\n    time = data.interval;\n}\n\n\nif (temperature > 30) {\n    msg.topic = \"THE WORLD IS ON FIRE\";\n    msg.payload = \"the temperature of the sensor is really high pls fix it: \" + temperature + \" degrees celsius\";\n} else if (temperature < 10) {\n    msg.topic = \"the ice age happened again\";\n    msg.payload = \"the temperature of the sensor is really low: \" + temperature + \" degrees celsius\";\n} else {\n    return;\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 580,
+        "wires": [
+            [
+                "a717b87011af4274",
+                "a885f43048945fe8"
+            ]
+        ]
+    },
+    {
+        "id": "a885f43048945fe8",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "83745f594254ae97",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "TEST",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "cool",
+        "payload": "trerty",
+        "payloadType": "str",
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "a717b87011af4274"
+            ]
+        ]
+    },
+    {
+        "id": "5166804c9c202a6b",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "cond. humid",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet battery = 0;\nlet humidity = 0;\nlet temperature = 0;\nlet time = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    battery = data.field1;\n    humidity = data.field2;\n    temperature = data.field3;\n    time = data.field4;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    battery = 0;\n    humidity = data.field8;\n    temperature = data.field7;\n    time = data.interval;\n}\n\nif (humidity > 60) {\n    msg.topic = \"high humidity warning\";\n    msg.payload = \"the humidity of the sensor is really high pls fix it: \" + humidity + \"% humidity\";\n} else if (humidity > 75) {\n    msg.topic = \"HIGH HUMIDITY WARNING\";\n    msg.payload = \"HUMIDITY IS REALLY HIGH THE WORLD IS ENDING: \" + humidity + \"% humidity\";\n} else if (humidity < 40) {\n    msg.topic = \"low humidity warning\";\n    msg.payload = \"the humidity of the sensor is really low: \" + humidity + \"% humidity\";\n} else {\n    return;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 620,
+        "wires": [
+            [
+                "a717b87011af4274",
+                "f1268a53617782c8"
+            ]
+        ]
+    },
+    {
         "id": "257c8f422fb74787",
         "type": "inject",
         "z": "ce035e2f6f094766",
@@ -739,6 +636,38 @@
         ]
     },
     {
+        "id": "a4d30976a4a2380b",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f1268a53617782c8",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 620,
+        "wires": []
+    },
+    {
         "id": "83086b5d1aa60c8c",
         "type": "inject",
         "z": "ce035e2f6f094766",
@@ -768,6 +697,60 @@
                 "66e4c33c7ee94061"
             ]
         ]
+    },
+    {
+        "id": "66e4c33c7ee94061",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "075bf09f8ffd3f52",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "cond. humid - Relay",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet battery = 0;\nlet humidity = 0;\nlet temperature = 0;\nlet time = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    battery = data.field1;\n    humidity = data.field2;\n    temperature = data.field3;\n    time = data.field4;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    battery = 0;\n    humidity = data.field8;\n    temperature = data.field7;\n    time = data.interval;\n}\n\nif (humidity > 60) {\n    // turn on small fan (port 7)\n    msg.fPort = \"7\";\n    msg.payload = \"01\";\n} else if (humidity > 75) {\n    //fPort 6 Is Fan - TURN ON BIG FAN\n    msg.fPort = \"6\";\n    msg.payload = \"01\";\n} else if (humidity < 40) {\n    // TURN OFF ALL FANS\n    msg.fPort = \"6\";\n    msg.payload = \"00\";\n} else {\n    return;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 660,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa",
+                "030f8b970c1bb019"
+            ]
+        ]
+    },
+    {
+        "id": "c556a2ae6cd54573",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 720,
+        "wires": []
     },
     {
         "id": "dbdbaaf561f78233",
@@ -978,5 +961,22 @@
                 "36cf813c2bcc5dfa"
             ]
         ]
+    },
+    {
+        "id": "030f8b970c1bb019",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 660,
+        "wires": []
     }
 ]
