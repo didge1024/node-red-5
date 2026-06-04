@@ -719,7 +719,7 @@
         "type": "function",
         "z": "ce035e2f6f094766",
         "name": "cond. humid - Relay",
-        "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nif (humidity > 60) {\n    // turn on small fan (port 7)\n    msg.topic = \"7\";\n    msg.payload = \"01\";\n} else if (humidity > 75) {\n    //fPort 6 Is Fan - TURN ON BIG FAN\n    msg.fPort = \"6\";\n    msg.payload = \"01\";\n} else if (humidity < 40) {\n    // TURN OFF ALL FANS\n    msg.fPort = \"6\";\n    msg.payload = \"00\";\n} else {\n    return;\n}\n\nreturn msg;",
+        "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nif (humidity > 60) {\n    // turn on small fan (port 7)\n    msg.fPort = \"7\";\n    msg.payload = \"01\";\n} else if (humidity > 75) {\n    //fPort 6 Is Fan - TURN ON BIG FAN\n    msg.fPort = \"6\";\n    msg.payload = \"01\";\n} else if (humidity < 40) {\n    // TURN OFF ALL FANS\n    msg.fPort = \"6\";\n    msg.payload = \"00\";\n} else {\n    return;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
