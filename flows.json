@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "d933077d552b7f13",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "43d1740e38cc6310",
         "type": "tls-config",
         "name": "mqtt.lora.eagelcovewc.com",
@@ -631,7 +639,7 @@
         "type": "debug",
         "z": "ce035e2f6f094766",
         "name": "debug 5",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -722,7 +730,8 @@
         "y": 280,
         "wires": [
             [
-                "36cf813c2bcc5dfa"
+                "36cf813c2bcc5dfa",
+                "030f8b970c1bb019"
             ]
         ]
     },
@@ -967,5 +976,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "030f8b970c1bb019",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 280,
+        "wires": []
     }
 ]
