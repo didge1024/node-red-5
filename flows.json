@@ -951,5 +951,21 @@
                 "36cf813c2bcc5dfa"
             ]
         ]
+    },
+    {
+        "id": "dc4e19b1ec72298c",
+        "type": "GSheetAdvance",
+        "z": "ce035e2f6f094766",
+        "creds": "",
+        "method": "",
+        "action": "",
+        "sheet": "",
+        "cells": "",
+        "name": "",
+        "x": 960,
+        "y": 280,
+        "wires": [
+            []
+        ]
     }
 ]
