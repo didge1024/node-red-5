@@ -962,22 +962,6 @@
         ]
     },
     {
-        "id": "dc4e19b1ec72298c",
-        "type": "GSheetAdvance",
-        "z": "ce035e2f6f094766",
-        "creds": "",
-        "method": "",
-        "action": "",
-        "sheet": "",
-        "cells": "",
-        "name": "",
-        "x": 960,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "030f8b970c1bb019",
         "type": "debug",
         "z": "ce035e2f6f094766",
