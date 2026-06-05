@@ -94,6 +94,11 @@
         "server": "10.8.0.1:8080"
     },
     {
+        "id": "2aaf6d9b653268e5",
+        "type": "gauthAdv",
+        "name": "iotsjcstem@project-5c25f85b-5778-4e5b-b0d.iam.gserviceaccount.com"
+    },
+    {
         "id": "efd5c596d901410c",
         "type": "mqtt in",
         "z": "ce035e2f6f094766",
@@ -978,5 +983,47 @@
         "x": 920,
         "y": 660,
         "wires": []
+    },
+    {
+        "id": "60c8658c94ce1520",
+        "type": "GSheetAdvance",
+        "z": "ce035e2f6f094766",
+        "creds": "2aaf6d9b653268e5",
+        "method": "append",
+        "action": "",
+        "sheet": "1fu4Gn7SiqCYtxsu7It0AynzBzgmv7h9TNbOtrt09ayM",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 930,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c29f1759ffa7707",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[\"value 1\", \"value 2\"]",
+        "payloadType": "str",
+        "x": 640,
+        "y": 960,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
     }
 ]
