@@ -1034,7 +1034,7 @@
         "type": "debug",
         "z": "ce035e2f6f094766",
         "name": "debug 10",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1057,7 +1057,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
+        "x": 660,
         "y": 880,
         "wires": [
             [
