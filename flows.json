@@ -1020,8 +1020,8 @@
         "topic": "",
         "payload": "[\"1/1/1960\", \"2\", \"56\"]",
         "payloadType": "json",
-        "x": 650,
-        "y": 960,
+        "x": 660,
+        "y": 1000,
         "wires": [
             [
                 "60c8658c94ce1520"
@@ -1043,5 +1043,25 @@
         "x": 1150,
         "y": 760,
         "wires": []
+    },
+    {
+        "id": "19e9fe697ebc19a1",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "storage",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n}\n\n\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 860,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
     }
 ]
