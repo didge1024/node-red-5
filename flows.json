@@ -992,7 +992,7 @@
         "method": "append",
         "action": "",
         "sheet": "1fu4Gn7SiqCYtxsu7It0AynzBzgmv7h9TNbOtrt09ayM",
-        "cells": "",
+        "cells": "Sheet1!A2",
         "flatten": false,
         "name": "",
         "x": 930,
