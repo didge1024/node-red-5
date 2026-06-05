@@ -1018,9 +1018,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "[\"value 1\", \"value 2\"]",
+        "payload": "[\"1/1/1960\", \"2\", \"56\"]",
         "payloadType": "json",
-        "x": 640,
+        "x": 650,
         "y": 960,
         "wires": [
             [
