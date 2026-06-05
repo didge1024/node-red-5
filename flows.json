@@ -998,7 +998,9 @@
         "x": 930,
         "y": 920,
         "wires": [
-            []
+            [
+                "a70e0b466b924770"
+            ]
         ]
     },
     {
@@ -1025,5 +1027,21 @@
                 "60c8658c94ce1520"
             ]
         ]
+    },
+    {
+        "id": "a70e0b466b924770",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 760,
+        "wires": []
     }
 ]
