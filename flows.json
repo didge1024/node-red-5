@@ -1019,7 +1019,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payload": "[\"value 1\", \"value 2\"]",
-        "payloadType": "str",
+        "payloadType": "json",
         "x": 640,
         "y": 960,
         "wires": [
