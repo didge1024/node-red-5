@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "a1b2c3d4e5f60001",
+        "type": "tab",
+        "label": "All Groups MQTT",
+        "disabled": false,
+        "info": "MQTT subscribers for all STEM group applications from ChirpStack",
+        "env": []
+    },
+    {
         "id": "43d1740e38cc6310",
         "type": "tls-config",
         "name": "mqtt.lora.eagelcovewc.com",
@@ -134,7 +142,7 @@
         "haserroroutput": true,
         "outputs": 2,
         "x": 930,
-        "y": 180,
+        "y": 220,
         "wires": [
             [],
             []
@@ -1064,5 +1072,233 @@
                 "60c8658c94ce1520"
             ]
         ]
+    },
+    {
+        "id": "a1b2c3d4e5f60010",
+        "type": "mqtt in",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group1 - All Events",
+        "topic": "application/53ee255f-1620-4450-9f51-eba79ca3e920/device/+/event/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 80,
+        "wires": [
+            [
+                "a1b2c3d4e5f60020"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60020",
+        "type": "debug",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group1 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 620,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60011",
+        "type": "mqtt in",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group2 - All Events",
+        "topic": "application/8ab36a13-8fba-49b3-8207-6fc4b1bb86fa/device/+/event/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "a1b2c3d4e5f60021"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60021",
+        "type": "debug",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group2 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 620,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60012",
+        "type": "mqtt in",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group3 - All Events",
+        "topic": "application/f35a8798-d184-4995-a658-f9c4938d073d/device/+/event/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "a1b2c3d4e5f60022"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60022",
+        "type": "debug",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group3 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 620,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60013",
+        "type": "mqtt in",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group4 - All Events",
+        "topic": "application/944ee854-89d0-4b0b-9524-f3559ef9df52/device/+/event/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 380,
+        "wires": [
+            [
+                "a1b2c3d4e5f60023"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60023",
+        "type": "debug",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group4 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 620,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60014",
+        "type": "mqtt in",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group5 - All Events",
+        "topic": "application/158daf48-5c45-4c73-88ee-75358c8f5323/device/+/event/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "a1b2c3d4e5f60024"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60024",
+        "type": "debug",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group5 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 620,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60015",
+        "type": "mqtt in",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group6 - All Events",
+        "topic": "application/8f77ae9d-fcd9-4d0a-ab94-c1b0f2d4c4cd/device/+/event/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 580,
+        "wires": [
+            [
+                "a1b2c3d4e5f60025"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60025",
+        "type": "debug",
+        "z": "a1b2c3d4e5f60001",
+        "name": "group6 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 620,
+        "y": 580,
+        "wires": []
     }
 ]
