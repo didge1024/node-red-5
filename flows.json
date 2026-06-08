@@ -1099,8 +1099,8 @@
         "targetType": "msg",
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
-        "x": 640,
-        "y": 1240,
+        "x": 940,
+        "y": 840,
         "wires": []
     },
     {
@@ -1137,8 +1137,8 @@
         "targetType": "msg",
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
-        "x": 640,
-        "y": 1280,
+        "x": 940,
+        "y": 880,
         "wires": []
     },
     {
@@ -1175,8 +1175,8 @@
         "targetType": "msg",
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
-        "x": 640,
-        "y": 1320,
+        "x": 940,
+        "y": 920,
         "wires": []
     },
     {
@@ -1213,8 +1213,8 @@
         "targetType": "msg",
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
-        "x": 640,
-        "y": 1360,
+        "x": 940,
+        "y": 960,
         "wires": []
     },
     {
@@ -1252,8 +1252,8 @@
         "targetType": "msg",
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
-        "x": 640,
-        "y": 1400,
+        "x": 940,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1290,8 +1290,8 @@
         "targetType": "msg",
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
-        "x": 640,
-        "y": 1440,
+        "x": 940,
+        "y": 1040,
         "wires": []
     },
     {
