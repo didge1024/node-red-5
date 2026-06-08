@@ -1049,7 +1049,7 @@
         "id": "19e9fe697ebc19a1",
         "type": "function",
         "z": "ce035e2f6f094766",
-        "name": "storage",
+        "name": "storage - th5",
         "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n}\n\nmsg.cells = \"th5!A2\";\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1057,7 +1057,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 630,
         "y": 760,
         "wires": [
             [
