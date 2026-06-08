@@ -1078,7 +1078,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 300,
-        "y": 1240,
+        "y": 1260,
         "wires": [
             [
                 "a1b2c3d4e5f60020",
@@ -1100,7 +1100,7 @@
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
         "x": 940,
-        "y": 1240,
+        "y": 1260,
         "wires": []
     },
     {
@@ -1117,7 +1117,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 300,
-        "y": 1280,
+        "y": 1300,
         "wires": [
             [
                 "a1b2c3d4e5f60021"
@@ -1138,7 +1138,7 @@
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
         "x": 940,
-        "y": 1280,
+        "y": 1300,
         "wires": []
     },
     {
@@ -1155,7 +1155,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 300,
-        "y": 1320,
+        "y": 1340,
         "wires": [
             [
                 "a1b2c3d4e5f60022"
@@ -1176,7 +1176,7 @@
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
         "x": 940,
-        "y": 1320,
+        "y": 1340,
         "wires": []
     },
     {
@@ -1193,7 +1193,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 300,
-        "y": 1360,
+        "y": 1380,
         "wires": [
             [
                 "a1b2c3d4e5f60023"
@@ -1214,7 +1214,7 @@
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
         "x": 940,
-        "y": 1360,
+        "y": 1380,
         "wires": []
     },
     {
@@ -1231,7 +1231,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 300,
-        "y": 1400,
+        "y": 1420,
         "wires": [
             [
                 "a1b2c3d4e5f60024",
@@ -1253,7 +1253,7 @@
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
         "x": 940,
-        "y": 1400,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1270,7 +1270,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 300,
-        "y": 1440,
+        "y": 1460,
         "wires": [
             [
                 "a1b2c3d4e5f60025"
@@ -1291,7 +1291,7 @@
         "statusVal": "payload.deviceInfo.deviceName",
         "statusType": "jsonata",
         "x": 940,
-        "y": 1440,
+        "y": 1460,
         "wires": []
     },
     {
