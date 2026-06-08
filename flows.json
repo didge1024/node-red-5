@@ -1082,7 +1082,8 @@
         "y": 1240,
         "wires": [
             [
-                "a1b2c3d4e5f60020"
+                "a1b2c3d4e5f60020",
+                "dfe741363434e6c5"
             ]
         ]
     },
@@ -1292,5 +1293,25 @@
         "x": 640,
         "y": 1440,
         "wires": []
+    },
+    {
+        "id": "dfe741363434e6c5",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "storage - th1",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n}\n\nmsg.cells = \"th1!A2\";\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 800,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
     }
 ]
