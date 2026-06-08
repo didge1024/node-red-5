@@ -102,7 +102,7 @@
         "id": "efd5c596d901410c",
         "type": "mqtt in",
         "z": "ce035e2f6f094766",
-        "name": "ECWC Infrastructure Meter",
+        "name": "Old group 5",
         "topic": "application/158daf48-5c45-4c73-88ee-75358c8f5323/device/+/event/up",
         "qos": "0",
         "datatype": "auto-detect",
@@ -111,7 +111,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 310,
+        "x": 270,
         "y": 400,
         "wires": [
             [
