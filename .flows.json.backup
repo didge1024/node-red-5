@@ -1,0 +1,1401 @@
+[
+    {
+        "id": "ce035e2f6f094766",
+        "type": "tab",
+        "label": "5: Flow1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a1b2c3d4e5f60001",
+        "type": "tab",
+        "label": "All Groups MQTT",
+        "disabled": false,
+        "info": "MQTT subscribers for all STEM group applications from ChirpStack",
+        "env": []
+    },
+    {
+        "id": "43d1740e38cc6310",
+        "type": "tls-config",
+        "name": "mqtt.lora.eagelcovewc.com",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "mqtt_client.pem",
+        "keyname": "mqtt_client.key",
+        "caname": "ca.pem",
+        "servername": "mqtt.lora.eagelcovewc.com",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "9d156d3c3c4f5a59",
+        "type": "telegram bot",
+        "botname": "SJI IOT BOT",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "b79a80b523e80429",
+        "type": "mqtt-broker",
+        "name": "mqtt.lora.ecwc.com",
+        "broker": "mqtt.lora.eaglecovewc.com",
+        "port": "8883",
+        "tls": "43d1740e38cc6310",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "766e0213db921d4c",
+        "type": "chirpstack-server",
+        "server": "10.8.0.1:8080"
+    },
+    {
+        "id": "2aaf6d9b653268e5",
+        "type": "gauthAdv",
+        "name": "iotsjcstem@project-5c25f85b-5778-4e5b-b0d.iam.gserviceaccount.com"
+    },
+    {
+        "id": "efd5c596d901410c",
+        "type": "mqtt in",
+        "z": "ce035e2f6f094766",
+        "name": "Old group 5",
+        "topic": "application/158daf48-5c45-4c73-88ee-75358c8f5323/device/+/event/up",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 400,
+        "wires": [
+            [
+                "7ed9cbb3230aa9fe",
+                "d08923424dad4b7e",
+                "49e7b12ee81a8322",
+                "5166804c9c202a6b",
+                "a4d30976a4a2380b",
+                "075bf09f8ffd3f52"
+            ]
+        ]
+    },
+    {
+        "id": "05e9c02681cb4969",
+        "type": "telegram sender",
+        "z": "ce035e2f6f094766",
+        "name": "Humidity Sender",
+        "bot": "9d156d3c3c4f5a59",
+        "haserroroutput": true,
+        "outputs": 2,
+        "x": 930,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "18aec99d112e431d",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "Group 5 LoRaWAN Info",
+        "info": "## Group 5 - LoRaWAN Device Info\n\n**Application ID:** `158daf48-5c45-4c73-88ee-75358c8f5323`\n**MQTT Topic:** `application/158daf48-5c45-4c73-88ee-75358c8f5323/device/+/event/up`\n**Telegram Chat ID:** `-5201535256`\n**All-groups Chat ID:** `-5144508977`\n\n### Relay 5 (4 Channel Relay)\n- **DEV EUI:** `48E663FFFE301020`\n- **APP EUI:** `48FF000000001020`\n- **APP KEY:** `4597658061A3698C78521ADCFE4B3C78`\n\n### TempHum5 (Temp & Humid Sensor)\n- **DEV EUI:** `48E663FFFE3010EA`\n- **APP EUI:** `48FF0000000010EA`\n- **APP KEY:** `6CDED7C5F00999F100B97BC68AD33220`\n\n---\n**Telegram for Windows:** [Download](https://telegram.org/dl/desktop/win)\n\n**AgroSense Sensor Manual:** [PDF](https://github.com/Makerfabs/Agrosense-Decoder/blob/main/Agrosense_Air_Temperature_Humidity_Sensor/AgroSense_Air%20Temperature%20and%20Humidity%20Sensor%20LoRaWAN%C2%AE%20Manual%20V1.2.pdf)\n\n**Telegram Web App:** [Open](https://web.telegram.org/k/)\n**Node-RED Telegram Docs:** [flows.nodered.org](https://flows.nodered.org/node/node-red-contrib-telegrambot)\nhttps://t.me/+WY5m7Pdn48s4OWE5",
+        "x": 100,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "7ed9cbb3230aa9fe",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a717b87011af4274",
+        "type": "e-mail",
+        "z": "ce035e2f6f094766",
+        "d": true,
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "smithlum000@stu.sjisd.org",
+        "dname": "IOT BOT Email",
+        "x": 960,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "36cf813c2bcc5dfa",
+        "type": "chirpstack-enqueue",
+        "z": "ce035e2f6f094766",
+        "name": "Relay Port",
+        "server": "766e0213db921d4c",
+        "devEui": "48e663fffe301020",
+        "applicationId": "",
+        "fPort": "",
+        "confirmed": true,
+        "debug": false,
+        "x": 630,
+        "y": 720,
+        "wires": [
+            [
+                "c556a2ae6cd54573"
+            ]
+        ]
+    },
+    {
+        "id": "bc66ae0b4d0e7882",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "test99",
+        "payload": "hello world",
+        "payloadType": "str",
+        "x": 300,
+        "y": 540,
+        "wires": [
+            [
+                "a717b87011af4274",
+                "a7fdb08685acf5c5"
+            ]
+        ]
+    },
+    {
+        "id": "a7fdb08685acf5c5",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d08923424dad4b7e",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "d": true,
+        "name": "transmit sensor data",
+        "func": "let data = msg.payload.object;\n\nlet battery = data.field1;\nlet humidity = data.field2;\nlet temperature = data.field3;\nlet time = data.field4;\n\nmsg.payload = {\n    battery: battery,\n    humidity: humidity,\n    temperature: temperature,\n    time: time\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "a717b87011af4274",
+                "53717a355bfeb950"
+            ]
+        ]
+    },
+    {
+        "id": "2e3e4702cd07846e",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 2",
+        "info": "field 2: humidity",
+        "x": 50,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8beaa89f7c0c975e",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 3",
+        "info": "field 3: temperature (celsius)",
+        "x": 50,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c899249f960cac3f",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 4",
+        "info": "field 4: time (seconds)",
+        "x": 50,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "63361651947f4952",
+        "type": "delay",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "hours",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 200,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a136e5e806930228",
+        "type": "comment",
+        "z": "ce035e2f6f094766",
+        "name": "field 1",
+        "info": "field 1: voltage",
+        "x": 50,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "53717a355bfeb950",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e726d571028a8588",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "d": true,
+        "name": "relay payload",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"ad45588a-62f3-43c8-9d10-a4389278825c\",\"time\":\"2026-05-28T15:25:11.377803467+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"e27dcb4c-2645-43f9-a398-2c8bcd40631a\",\"deviceProfileName\":\"MakerFab Agrosense_4_Channel_Relay\",\"deviceName\":\"Relay 5\",\"devEui\":\"48e663fffe301020\",\"deviceClassEnabled\":\"CLASS_C\",\"tags\":{}},\"devAddr\":\"013c9f30\",\"adr\":true,\"dr\":3,\"fCnt\":16,\"fPort\":2,\"confirmed\":true,\"data\":\"ABEAAAAAAcoA4wAAAAAAAAAAAADqYGoYXlcA\",\"object\":{\"field4\":0,\"field8\":45.8,\"field6\":0,\"device_time\":\"2026-05-28 15:25:11\",\"field3\":0,\"field1\":0,\"field7\":22.7,\"field5\":0,\"device_time_unix\":1779981911,\"field2\":0,\"interval\":60},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":1417513920,\"nsTime\":\"2026-05-28T15:25:11.169856930+00:00\",\"rssi\":-49,\"snr\":11.5,\"channel\":2,\"location\":{\"source\":\"GPS\"},\"context\":\"fu8fvQ==\"}],\"txInfo\":{\"frequency\":904300000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "d08923424dad4b7e"
+            ]
+        ]
+    },
+    {
+        "id": "1c8485a73d70421d",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "sensor payload",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":52.1,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 500,
+        "wires": [
+            [
+                "d08923424dad4b7e"
+            ]
+        ]
+    },
+    {
+        "id": "fab73e4c5812eada",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "test low temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":52.1,\"field1\":2.8,\"field3\":5,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [
+                "49e7b12ee81a8322"
+            ]
+        ]
+    },
+    {
+        "id": "e18b44f64068b016",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "test high temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":52.1,\"field1\":2.8,\"field3\":60,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "49e7b12ee81a8322"
+            ]
+        ]
+    },
+    {
+        "id": "fe980970ebefa4f0",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "test low humid",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":30,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 740,
+        "wires": [
+            [
+                "5166804c9c202a6b"
+            ]
+        ]
+    },
+    {
+        "id": "cc25c466997e83d9",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "test high humid",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":70,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 780,
+        "wires": [
+            [
+                "5166804c9c202a6b",
+                "075bf09f8ffd3f52"
+            ]
+        ]
+    },
+    {
+        "id": "49e7b12ee81a8322",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "cond. temp",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet battery = 0;\nlet humidity = 0;\nlet temperature = 0;\nlet time = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    battery = data.field1;\n    humidity = data.field2;\n    temperature = data.field3;\n    time = data.field4;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    battery = 0;\n    humidity = data.field8;\n    temperature = data.field7;\n    time = data.interval;\n}\n\n\nif (temperature > 30) {\n    msg.topic = \"THE WORLD IS ON FIRE\";\n    msg.payload = \"the temperature of the sensor is really high pls fix it: \" + temperature + \" degrees celsius\";\n} else if (temperature < 10) {\n    msg.topic = \"the ice age happened again\";\n    msg.payload = \"the temperature of the sensor is really low: \" + temperature + \" degrees celsius\";\n} else {\n    return;\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 580,
+        "wires": [
+            [
+                "a717b87011af4274",
+                "a885f43048945fe8"
+            ]
+        ]
+    },
+    {
+        "id": "a885f43048945fe8",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "83745f594254ae97",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "TEST",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "cool",
+        "payload": "trerty",
+        "payloadType": "str",
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "a717b87011af4274"
+            ]
+        ]
+    },
+    {
+        "id": "5166804c9c202a6b",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "cond. humid",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet battery = 0;\nlet humidity = 0;\nlet temperature = 0;\nlet time = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    battery = data.field1;\n    humidity = data.field2;\n    temperature = data.field3;\n    time = data.field4;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    battery = 0;\n    humidity = data.field8;\n    temperature = data.field7;\n    time = data.interval;\n}\n\nif (humidity > 60) {\n    msg.topic = \"high humidity warning\";\n    msg.payload = \"the humidity of the sensor is really high pls fix it: \" + humidity + \"% humidity\";\n} else if (humidity > 75) {\n    msg.topic = \"HIGH HUMIDITY WARNING\";\n    msg.payload = \"HUMIDITY IS REALLY HIGH THE WORLD IS ENDING: \" + humidity + \"% humidity\";\n} else if (humidity < 40) {\n    msg.topic = \"low humidity warning\";\n    msg.payload = \"the humidity of the sensor is really low: \" + humidity + \"% humidity\";\n} else {\n    return;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 620,
+        "wires": [
+            [
+                "a717b87011af4274",
+                "f1268a53617782c8"
+            ]
+        ]
+    },
+    {
+        "id": "257c8f422fb74787",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "test normal temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":55,\"field1\":2.8,\"field3\":27,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 680,
+        "wires": [
+            [
+                "49e7b12ee81a8322"
+            ]
+        ]
+    },
+    {
+        "id": "0192e4e46c684dd4",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "test normal humid",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"60d4fc49-8876-4fc5-9038-01d29ba1921b\",\"time\":\"2026-05-28T15:35:39.449056290+00:00\",\"deviceInfo\":{\"tenantId\":\"76bfe15e-38c3-47a4-b1de-d77d9ddff671\",\"tenantName\":\"STEM\",\"applicationId\":\"158daf48-5c45-4c73-88ee-75358c8f5323\",\"applicationName\":\"group5\",\"deviceProfileId\":\"db7e8178-5e70-459e-b98d-b07f9a8556f7\",\"deviceProfileName\":\"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\",\"deviceName\":\"TempHum5\",\"devEui\":\"48e663fffe3010ea\",\"deviceClassEnabled\":\"CLASS_A\",\"tags\":{}},\"devAddr\":\"006679c8\",\"adr\":true,\"dr\":3,\"fCnt\":2398,\"fPort\":2,\"confirmed\":true,\"data\":\"CNocAgkA2AAEk+BqGGDJAA==\",\"object\":{\"field2\":55,\"field1\":2.8,\"field3\":21.6,\"device_time\":\"2026-05-28 15:35:37\",\"device_time_unix\":1779982537,\"field4\":300},\"rxInfo\":[{\"gatewayId\":\"ac1f09fffe1f6287\",\"uplinkId\":609812529,\"nsTime\":\"2026-05-28T15:35:39.240226280+00:00\",\"rssi\":-47,\"snr\":14.5,\"channel\":6,\"rfChain\":1,\"location\":{\"source\":\"GPS\"},\"context\":\"CZCP4g==\"}],\"txInfo\":{\"frequency\":905100000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}},\"regionConfigId\":\"us915_1\"}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 820,
+        "wires": [
+            [
+                "5166804c9c202a6b"
+            ]
+        ]
+    },
+    {
+        "id": "a4d30976a4a2380b",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f1268a53617782c8",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "83086b5d1aa60c8c",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R4 On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "9",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "01",
+        "payloadType": "str",
+        "x": 330,
+        "y": 920,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa",
+                "66e4c33c7ee94061"
+            ]
+        ]
+    },
+    {
+        "id": "66e4c33c7ee94061",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "075bf09f8ffd3f52",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "cond. humid - Relay",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet battery = 0;\nlet humidity = 0;\nlet temperature = 0;\nlet time = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    battery = data.field1;\n    humidity = data.field2;\n    temperature = data.field3;\n    time = data.field4;\n\n    if (humidity > 60) {\n        // turn on small fan (port 7)\n        msg.fPort = \"6\";\n        msg.payload = \"01\";\n    } else if (humidity > 75) {\n        //fPort 6 Is Fan - TURN ON BIG FAN\n        msg.fPort = \"6\";\n        msg.payload = \"01\";\n    } else if (humidity < 40) {\n        // TURN OFF ALL FANS\n        msg.fPort = \"6\";\n        msg.payload = \"00\";\n    } else {\n        return;\n    }\n\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    return;\n    battery = 0;\n    humidity = data.field8;\n    temperature = data.field7;\n    time = data.interval;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 660,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa",
+                "030f8b970c1bb019"
+            ]
+        ]
+    },
+    {
+        "id": "c556a2ae6cd54573",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "dbdbaaf561f78233",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R4 Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "9",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "00",
+        "payloadType": "str",
+        "x": 330,
+        "y": 880,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
+    },
+    {
+        "id": "599a4ce209d67f68",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R3 On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "8",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "01",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1000,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
+    },
+    {
+        "id": "fd4260d53348db85",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R3 Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "8",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "00",
+        "payloadType": "str",
+        "x": 330,
+        "y": 960,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
+    },
+    {
+        "id": "8dbac6fd040b3297",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R2 On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "7",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "01",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1080,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
+    },
+    {
+        "id": "0b13e409a2315575",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R2 Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "7",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "00",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1040,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
+    },
+    {
+        "id": "d5f76d6e70b8b1c9",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R1 On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "6",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "01",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1160,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
+    },
+    {
+        "id": "fbc58bc305b1cfde",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "R1 Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "fPort",
+                "v": "6",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "00",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1120,
+        "wires": [
+            [
+                "36cf813c2bcc5dfa"
+            ]
+        ]
+    },
+    {
+        "id": "030f8b970c1bb019",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "60c8658c94ce1520",
+        "type": "GSheetAdvance",
+        "z": "ce035e2f6f094766",
+        "creds": "2aaf6d9b653268e5",
+        "method": "append",
+        "action": "",
+        "sheet": "1fu4Gn7SiqCYtxsu7It0AynzBzgmv7h9TNbOtrt09ayM",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 950,
+        "y": 1200,
+        "wires": [
+            [
+                "a70e0b466b924770"
+            ]
+        ]
+    },
+    {
+        "id": "0c29f1759ffa7707",
+        "type": "inject",
+        "z": "ce035e2f6f094766",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[\"1/1/1960\", \"2\", \"56\"]",
+        "payloadType": "json",
+        "x": 280,
+        "y": 1200,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
+    },
+    {
+        "id": "a70e0b466b924770",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "19e9fe697ebc19a1",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "storage - th5",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n}\n\nmsg.cells = \"th5!A2\";\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1120,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60010",
+        "type": "mqtt in",
+        "z": "ce035e2f6f094766",
+        "name": "Salt1 - All Events",
+        "topic": "application/53ee255f-1620-4450-9f51-eba79ca3e920/device/+/event/up",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1260,
+        "wires": [
+            [
+                "a1b2c3d4e5f60020",
+                "dfe741363434e6c5"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60020",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "group1 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 940,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60011",
+        "type": "mqtt in",
+        "z": "ce035e2f6f094766",
+        "name": "Salt2 - All Events",
+        "topic": "application/8ab36a13-8fba-49b3-8207-6fc4b1bb86fa/device/+/event/up",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1300,
+        "wires": [
+            [
+                "a1b2c3d4e5f60021",
+                "5da68d3fe5b88b52"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60021",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "group2 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 940,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60012",
+        "type": "mqtt in",
+        "z": "ce035e2f6f094766",
+        "name": "Salt3 - All Events",
+        "topic": "application/f35a8798-d184-4995-a658-f9c4938d073d/device/+/event/up",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1340,
+        "wires": [
+            [
+                "a1b2c3d4e5f60022",
+                "fe497413e2dda62e"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60022",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "group3 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 940,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60013",
+        "type": "mqtt in",
+        "z": "ce035e2f6f094766",
+        "name": "Salt4 - All Events",
+        "topic": "application/944ee854-89d0-4b0b-9524-f3559ef9df52/device/+/event/up",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1380,
+        "wires": [
+            [
+                "a1b2c3d4e5f60023",
+                "357271e0637adab8"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60023",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "group4 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 940,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60014",
+        "type": "mqtt in",
+        "z": "ce035e2f6f094766",
+        "name": "Salt5 - All Events",
+        "topic": "application/158daf48-5c45-4c73-88ee-75358c8f5323/device/+/event/up",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1420,
+        "wires": [
+            [
+                "a1b2c3d4e5f60024",
+                "19e9fe697ebc19a1"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60024",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "group5 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 940,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60015",
+        "type": "mqtt in",
+        "z": "ce035e2f6f094766",
+        "name": "Salt6 - All Events",
+        "topic": "application/8f77ae9d-fcd9-4d0a-ab94-c1b0f2d4c4cd/device/+/event/up",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b79a80b523e80429",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1460,
+        "wires": [
+            [
+                "a1b2c3d4e5f60025",
+                "46a93cc9acba0796"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60025",
+        "type": "debug",
+        "z": "ce035e2f6f094766",
+        "name": "group6 debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.deviceInfo.deviceName",
+        "statusType": "jsonata",
+        "x": 940,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "dfe741363434e6c5",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "storage - th1",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n    msg.cells = \"th3!A2\";\n\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n    msg.cells = \"relay1!A2\";\n\n}\n\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 960,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
+    },
+    {
+        "id": "5da68d3fe5b88b52",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "storage - th2",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n}\n\nmsg.cells = \"th2!A2\";\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1000,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
+    },
+    {
+        "id": "fe497413e2dda62e",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "storage - 3",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n    msg.cells = \"th3!A2\";\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n    msg.cells = \"relay3!A2\";\n}\n\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1040,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
+    },
+    {
+        "id": "357271e0637adab8",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "storage - th4",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n}\n\nmsg.cells = \"th4!A2\";\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1080,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
+    },
+    {
+        "id": "46a93cc9acba0796",
+        "type": "function",
+        "z": "ce035e2f6f094766",
+        "name": "storage - th6",
+        "func": "let device = msg.payload.deviceInfo;\n\nlet data = msg.payload.object;\n\nlet date = msg.payload.time;\n\nlet humidity = 0;\nlet temperature = 0;\n\nif (device.deviceProfileName = \"MakerFab Agrosense_Air_Temperature_Humidity_Sensor\") {\n    humidity = data.field2;\n    temperature = data.field3;\n} else if (device.deviceProfileName = \"MakerFab Agrosense_4_Channel_Relay\") {\n    humidity = data.field8;\n    temperature = data.field7;\n}\n\nmsg.cells = \"th6!A2\";\nmsg.payload = [date, humidity, temperature];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1160,
+        "wires": [
+            [
+                "60c8658c94ce1520"
+            ]
+        ]
+    }
+]
